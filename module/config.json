@@ -1,0 +1,8 @@
+ {
+	"hostName":"localhost",
+	"user":"root",
+	"password":"",
+	"dbName":"task1",
+	"baseurl":"http://localhost:3000/user/"
+}
+
