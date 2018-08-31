@@ -5,8 +5,8 @@ var commFunc = require('../module/commonFunction');
 var responses = require('../module/responses');
 
 exports.submit = function(req, res){
-    var {name, email, mobile, password} = req.body;
-    let data= commFunc.checkKeyExist({name, email, password, mobile})
+    var { UserName, name, email, gender, DOB, Age, Intrest_in_age, mobile, Title, Description} = req.body;
+    let data= commFunc.checkKeyExist({ UserName, name, email, DOB, mobile})
     if(data.status == false || data=='undefined')
     { 
         responses.parameterMissing(res, data.data);
@@ -29,7 +29,9 @@ exports.submit = function(req, res){
                 user.name = req.body.name;
                 user.email = req.body.email;
                 user.mobile = req.body.mobile;
-                user.password = md5(req.body.password);
+                user.UserName = req.body.UserName;
+                user.Age =req.body.Age;
+                user.UserId =req.body.UserId
                 var userdata = new UserModel(user);
                 userdata.save().then(data =>{
                     responses.success(res, user)

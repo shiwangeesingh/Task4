@@ -20,9 +20,9 @@ const _ = require("lodash")
           err[key] = `invalid  ${key}`;
         }
       }
-      else if(key == "password")
+      else if(key == "UserName")
       {
-        if ( value.length <6 && value.length>10) {
+        if ( value.length <1) {
           err[key] = `invalid  ${key}`;
         }
       }
