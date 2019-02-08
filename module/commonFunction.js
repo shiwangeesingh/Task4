@@ -53,7 +53,7 @@ var config = {
             "SMTP_PORT": 25,
             "SMTP_USER":"apikey",
             "SMTP_PASS": "key",
-            "SMTP_PASS" : `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`
+            "SMTP_PASS" : ``
           }
           var mailer = nodemailer.createTransport(smtpTransport({
                         host: config.SMTP_HOST,
